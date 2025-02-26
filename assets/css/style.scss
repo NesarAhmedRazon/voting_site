@@ -1,0 +1,17 @@
+@import 'variables';
+@import '/assets/fonts/ico-v1.0/style.css';
+
+body {
+    font-family: 'Gotham Narrow', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.3s;
+}
