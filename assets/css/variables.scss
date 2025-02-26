@@ -62,6 +62,33 @@ $spacers: (
 
 }
 
+// custom Background and Text Colors
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+
+    .text-#{$name} {
+        color: $color;
+    }
+
+    .hover {
+        &-bg-#{$name} {
+            &:hover {
+                background-color: $color;
+            }
+
+        }
+
+        &-text-#{$name} {
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+}
+
+
 @mixin generate-utility($prop, $prefix, $spacers, $breakpoints) {
     .#{$prefix} {
         @each $br, $pt in $breakpoints {
@@ -110,4 +137,15 @@ $zindex: (
 @for $idx from -5 through 5 {
     $key: if($idx < 0, 'n#{$idx * -1}', $idx); // Add 'n' for negative values
     $zindex: map-merge($zindex, ($key: $idx)); // Add to the map
+}
+
+$parcent: (
+); // Initialize an empty map
+
+@for $idx from 5 through 100 {
+    @if $idx % 5==0 {
+        // Step by 5
+        $key: if($idx < 0, 'n#{$idx * -1}', $idx); // Add 'n' for negative values
+        $parcent: map-merge($parcent, ($key: #{$idx * 1%})); // Add to the map
+    }
 }

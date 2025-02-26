@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 622 399.1" overflow="visible" xml:space="preserve">
+	 	 <style>
+	 .shadow {
+  -webkit-filter: drop-shadow( -2px -4px 5px rgba(0, 0, 0, .1));
+  filter: drop-shadow( -2px -4px 5px rgba(0, 0, 0, .1));
+  /* Similar syntax to box-shadow */
+}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="155.4875" y1="554.59" x2="665.3425" y2="44.7351">
+	<stop  offset="0" style="stop-color:#6FACDE"/>
+	<stop  offset="0.133" style="stop-color:#7AB2E0"/>
+	<stop  offset="0.3634" style="stop-color:#96C2E7"/>
+	<stop  offset="0.6637" style="stop-color:#C4DDF1"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path class="shadow" fill="url(#SVGID_1_)" d="M621.9,1.6C555.7,187.5,320.5,337.8,12.9,396.7c0,0,0,0,0,0c-4.3,0.8-8.6,1.6-12.9,2.4H622V1.3
+	C621.9,1.4,621.9,1.5,621.9,1.6z"/>
+</svg>

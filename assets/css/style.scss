@@ -16,6 +16,33 @@ a {
     transition: color 0.3s;
 }
 
+.btn {
+    &-cta {
+        color: #fff;
+        background-color: map-get($colors, ox_blue2);
+        font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+        font-size: 1.8rem;
+        margin-left: 1px;
+        line-height: 1;
+        padding: 0.3rem 1.25rem;
+        letter-spacing: 0.5px;
+        box-shadow: 4px 4px 0 map-get($colors, yellow);
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        display: inline-block;
+
+        -webkit-appearance: button;
+        margin: 0;
+
+        &:hover {
+            background-color: map-get($colors, ox_blue);
+            color: map-get($colors, yellow);
+            box-shadow: 4px 4px 3px #fff;
+        }
+    }
+}
+
 .container {
     max-width: 1100px;
 
@@ -62,7 +89,7 @@ a {
             width: 55%;
             height: 4rem;
             /* Adjust height as needed */
-            background: url('/assets/images/obj_1.svg') no-repeat left bottom;
+            background: url(/assets/images/obj_1.svg) no-repeat left bottom;
             background-size: contain;
             position: absolute;
             bottom: 0;
@@ -219,6 +246,132 @@ a {
 
 }
 
+.ballot {
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    transition: box-shadow 0.3s;
+    position: relative;
+
+    &.expired {
+        cursor: not-allowed;
+        -webkit-filter: grayscale(1) contrast(0.2) brightness(1.5) blur(0.9px);
+        filter: grayscale(1) contrast(0.2) brightness(1.5) blur(0.9px);
+        box-shadow: none;
+        opacity: 0.9;
+    }
+
+
+    &.ico-check {
+        &:before {
+            top: 0.3rem;
+            width: 1.5em;
+            height: 1.5em;
+            right: 0.3rem;
+            display: flex;
+            color: #fff;
+            font-size: 1.2rem;
+            position: absolute;
+            font-size: 1.44rem;
+            border-radius: 50%;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            border: solid #fff 2px;
+            background-color: map-get($colors, chk_green);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05);
+    }
+
+    & .flag {
+        $size: 5;
+        width: #{$size}rem;
+        height: #{$size}rem;
+
+        @media (min-width: 768px) {
+            width: #{$size + 1}rem;
+            height: #{$size + 1}rem;
+        }
+
+        @media (min-width: 991.98px) {
+            width: #{$size + 2}rem;
+            height: #{$size + 2}rem;
+        }
+    }
+
+    & .info {
+        display: grid;
+        gap: 0.2rem;
+        line-height: 1;
+        font-size: 1rem;
+
+        @media (min-width: 768px) {
+            font-size: 1rem;
+            gap: 0.4rem;
+        }
+
+        @media (min-width: 991.98px) {
+            font-size: 1.2rem;
+            gap: 0.4rem;
+        }
+
+        & .date {
+            font-size: 1em;
+            text-transform: uppercase;
+            font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+        }
+
+        & .teams,
+        & .loc,
+        & .date {
+            text-align: center;
+        }
+
+        & .teams,
+        & .loc {
+            font-family: 'Gotham Narrow Bold', Arial, Helvetica, sans-serif;
+        }
+
+        & .teams {
+            font-size: 1.5em;
+
+            & .team {
+                text-transform: uppercase;
+            }
+        }
+
+        & .loc {
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.rhfr {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 10rem;
+    height: auto;
+
+    @media (min-width: 768px) {
+        width: 10rem;
+        top: auto;
+        left: auto;
+        bottom: 1.6rem;
+        right: 1.6rem;
+    }
+
+    @media (min-width: 991.98px) {
+        width: 12rem;
+        bottom: 2.4rem;
+        right: 2rem;
+    }
+}
+
 .text {
     font-family: 'Gotham Narrow Medium', Arial, Helvetica, sans-serif;
 
@@ -300,6 +453,52 @@ a {
     }
 }
 
+.icon {
+
+    background-color: map-get($colors, lboy_blue);
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    font-size: 1.44rem;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: map-get($colors, lboy_blue2);
+
+    }
+}
+
+.footer {
+    &-links {
+        font-family: 'Gotham Narrow Medium', Arial, Helvetica, sans-serif;
+
+        &>a {
+            margin-top: 0.2em;
+            letter-spacing: 1px;
+
+            &:hover {
+                color: map-get($colors, yellow);
+            }
+
+            &:not(:last-child) {
+                &:after {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    content: '|';
+                    margin: 0 0.3rem;
+                }
+            }
+        }
+
+    }
+
+
+}
 
 $props: (
     m:margin,
@@ -321,3 +520,4 @@ $props: (
 
 @include generate-utility(z-index, zi, $zindex, $grid-breakpoints);
 @include generate-utility(min-height, min-vh, (50:50vh), $grid-breakpoints);
+@include generate-utility(width, w, $parcent, $grid-breakpoints);
