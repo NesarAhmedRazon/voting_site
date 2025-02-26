@@ -31,7 +31,7 @@ $spacers: (
 
 @font-face {
     font-family: "Gotham Narrow";
-    src: url("/assets/fonts/GothamNarrow-Book.otf") format("opentype");
+    src: url("assets/fonts/GothamNarrow-Book.otf") format("opentype");
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,7 +39,7 @@ $spacers: (
 
 @font-face {
     font-family: "Gotham Narrow Medium";
-    src: url("/assets/fonts/GothamNarrow-Medium.otf") format("opentype");
+    src: url("assets/fonts/GothamNarrow-Medium.otf") format("opentype");
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -47,7 +47,7 @@ $spacers: (
 
 @font-face {
     font-family: "Gotham Narrow Bold";
-    src: url("/assets/fonts/GothamNarrow-Bold.otf") format("opentype");
+    src: url("assets/fonts/GothamNarrow-Bold.otf") format("opentype");
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,7 +55,7 @@ $spacers: (
 
 @font-face {
     font-family: "Gotham Narrow Ultra";
-    src: url("/assets/fonts/GothamNarrow-Ultra.otf") format("opentype");
+    src: url("assets/fonts/GothamNarrow-Ultra.otf") format("opentype");
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
