@@ -24,7 +24,7 @@ function populateContests(id, data = null) {
               match?.exp ? ` expired` : ``
             }">
                 <div class="align-items-center card-body d-flex justify-content-between p-0">
-                    <img class="flag" src="assets/images/flags/${
+                    <img class="flag" src="assets/images/teams/${
                       match.team1
                     }.png" alt="${match.team1}">
                         <div class="info">
@@ -38,7 +38,7 @@ function populateContests(id, data = null) {
                               match?.exp ? ` Ballot Closed` : match.loc
                             }</div>
                         </div>
-                    <img class="flag" src="assets/images/flags/${
+                    <img class="flag" src="assets/images/teams/${
                       match.team2
                     }.png" alt="${match.team2}">
             
