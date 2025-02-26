@@ -1,5 +1,5 @@
 @import 'variables';
-@import '/assets/fonts/ico-v1.0/style.css';
+@import 'assets/fonts/ico-v1.0/style.css';
 
 body {
     font-family: 'Gotham Narrow', Arial, Helvetica, sans-serif;
@@ -68,7 +68,7 @@ a {
     &-body {
         background-color: map-get($colors, lboy_blue);
         //background-image: url('/assets/images/dots_resize.webp');
-        background-image: url('/assets/images/bg2.png');
+        background-image: url('assets/images/bg2.png');
         background-size: 100%;
         background-position: top center;
         background-repeat: repeat-y;
@@ -89,7 +89,7 @@ a {
             width: 55%;
             height: 4rem;
             /* Adjust height as needed */
-            background: url(/assets/images/obj_1.svg) no-repeat left bottom;
+            background: url('assets/images/obj_1.svg') no-repeat left bottom;
             background-size: contain;
             position: absolute;
             bottom: 0;
@@ -110,7 +110,7 @@ a {
             content: "";
             width: 60%;
             min-height: 10rem;
-            background: url(/assets/images/obj_2.svg) no-repeat right bottom;
+            background: url('assets/images/obj_2.svg') no-repeat right bottom;
             background-size: contain;
             position: absolute;
             bottom: 0;
@@ -156,7 +156,7 @@ a {
 .bg {
     &-site {
         background-color: map-get($colors, lboy_blue);
-        background-image: url('/assets/images/site_bg.webp');
+        background-image: url('assets/images/site_bg.webp');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -166,7 +166,7 @@ a {
     }
 
     &-elips {
-        background-image: url(/assets/images/player_bg.png);
+        background-image: url('assets/images/player_bg.png');
         background-position: calc(-1.5rem - var(--bs-gutter-x)* -0.5) bottom;
         background-repeat: no-repeat;
         background-size: 110% auto;
@@ -199,7 +199,7 @@ a {
 
 
     &-group {
-        background-image: url(/assets/images/players.png);
+        background-image: url('assets/images/players.png');
         background-position: right calc(0.5rem - var(--bs-gutter-x)* -0.5);
         background-repeat: no-repeat;
         background-size: 90% auto;
@@ -221,7 +221,7 @@ a {
     }
 
     &-players2 {
-        background-image: url(/assets/images/players2.png);
+        background-image: url('assets/images/players2.png');
         background-position: right center;
         background-repeat: no-repeat;
         background-size: contain;
