@@ -61,6 +61,20 @@ function populateContests(id, data = null) {
   });
 }
 
+// Add the navigation div to the body on load
+document.addEventListener("DOMContentLoaded", function () {
+  // Create a new div element
+  const newDiv = document.createElement("div");
+
+  // Set attributes or content for the div
+
+  newDiv.className = "position-fixed top-50 end-0 translate-middle-y w-25 h-25";
+  newDiv.style.backgroundColor = "lightblue";
+
+  // Append the div to the body
+  document.body.appendChild(newDiv);
+});
+
 async function fetchJsonFromUrl(url) {
   try {
     // Fetch the JSON data from the URL
