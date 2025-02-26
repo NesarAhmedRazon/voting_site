@@ -1,0 +1,113 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$colors: (
+    ox_blue: #002a44,
+    ox_blue2:#00263e,
+    lboy_blue:#6facde,
+    lboy_blue2:#4f8cbf,
+    yellow:#f0b323,
+    chk_green:#8bc34a,
+
+);
+$spacers: (
+    1_2:1.2rem,
+    2_1:2.1rem,
+    2_5:2.5rem,
+    2_6:2.6rem,
+    3_5:3.5rem,
+    4_1:4.1rem,
+    4_5:4.5rem,
+    4_8:4.8rem,
+    9:9rem,
+);
+
+
+@font-face {
+    font-family: "Gotham Narrow";
+    src: url("/assets/fonts/GothamNarrow-Book.otf") format("opentype");
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Gotham Narrow Medium";
+    src: url("/assets/fonts/GothamNarrow-Medium.otf") format("opentype");
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Gotham Narrow Bold";
+    src: url("/assets/fonts/GothamNarrow-Bold.otf") format("opentype");
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Gotham Narrow Ultra";
+    src: url("/assets/fonts/GothamNarrow-Ultra.otf") format("opentype");
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+@mixin generate-utility($prop, $prefix, $spacers, $breakpoints) {
+    .#{$prefix} {
+        @each $br, $pt in $breakpoints {
+            @if $br !=xs {
+                @media (min-width: $pt) {
+                    &-#{$br} {
+                        @each $n, $v in $spacers {
+                            &-#{$n} {
+                                @if type-of($prop)=="list" {
+                                    @each $p in $prop {
+                                        #{$p}: $v !important;
+                                    }
+                                }
+
+                                @else {
+                                    #{$prop}: $v !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @else {
+                @each $n, $v in $spacers {
+                    &-#{$n} {
+                        @if type-of($prop)=="list" {
+                            @each $p in $prop {
+                                #{$p}: $v !important;
+                            }
+                        }
+
+                        @else {
+                            #{$prop}: $v !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$zindex: (
+); // Initialize an empty map
+
+@for $idx from -5 through 5 {
+    $key: if($idx < 0, 'n#{$idx * -1}', $idx); // Add 'n' for negative values
+    $zindex: map-merge($zindex, ($key: $idx)); // Add to the map
+}

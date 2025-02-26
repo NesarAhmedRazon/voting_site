@@ -15,3 +15,309 @@ a {
     color: inherit;
     transition: color 0.3s;
 }
+
+.container {
+    max-width: 1100px;
+
+    &-header,
+    &-footer {
+        color: white;
+
+        & .title {
+            font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+        }
+    }
+
+    &-header {
+        @media (min-width: 768px) {
+            padding: 1.5rem;
+        }
+
+        @media (min-width: 991.98px) {
+            padding: 1rem 4.5rem;
+        }
+    }
+
+    &-body {
+        background-color: map-get($colors, lboy_blue);
+        //background-image: url('/assets/images/dots_resize.webp');
+        background-image: url('/assets/images/bg2.png');
+        background-size: 100%;
+        background-position: top center;
+        background-repeat: repeat-y;
+        color: map-get($colors, ox_blue);
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            padding: 2.5rem 2.5rem 9rem 2.5rem;
+        }
+
+        @media (min-width: 991.98px) {
+            padding: 2.5rem 4.5rem 9rem 4.5rem;
+        }
+
+        &::after {
+            content: "";
+            width: 55%;
+            height: 4rem;
+            /* Adjust height as needed */
+            background: url('/assets/images/obj_1.svg') no-repeat left bottom;
+            background-size: contain;
+            position: absolute;
+            bottom: 0;
+            /* Adjust position */
+            left: 0;
+            z-index: -3;
+
+            @media (min-width: 768px) {
+                height: 8rem;
+            }
+
+            @media (min-width: 991.98px) {
+                height: 10rem;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 60%;
+            min-height: 10rem;
+            background: url(/assets/images/obj_2.svg) no-repeat right bottom;
+            background-size: contain;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -2;
+
+            @media (min-width: 768px) {
+                min-height: 20rem;
+            }
+
+
+            @media (min-width: 991.98px) {
+                width: 57%;
+                min-height: 26rem;
+            }
+        }
+    }
+
+    &-footer {
+        position: relative;
+        z-index: 1;
+        //background-image: url(/assets/images/Footer.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        //height: 115px;
+        @media (min-width: 768px) {
+            padding: 1.5rem 2.5rem;
+        }
+
+        @media (min-width: 991.98px) {
+            padding: 1rem 4.5rem;
+        }
+
+
+
+
+    }
+
+
+}
+
+.bg {
+    &-site {
+        background-color: map-get($colors, lboy_blue);
+        background-image: url('/assets/images/site_bg.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 100vh;
+        line-height: 1.1;
+    }
+
+    &-elips {
+        background-image: url(/assets/images/player_bg.png);
+        background-position: calc(-1.5rem - var(--bs-gutter-x)* -0.5) bottom;
+        background-repeat: no-repeat;
+        background-size: 110% auto;
+        position: absolute;
+        right: calc(-1rem - var(--bs-gutter-x)* -0.5);
+        top: calc(-8% - var(--bs-gutter-x)* -0.5);
+        width: 100%;
+        height: 120%;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+
+            right: calc(-2.5rem - var(--bs-gutter-x)* -0.5);
+            top: calc(-0.25rem - var(--bs-gutter-x)* -0.5);
+            background-position: calc(0rem - var(--bs-gutter-x)* -0.5) top;
+            height: 97%;
+            width: 116%;
+        }
+
+        @media (min-width: 991.98px) {
+            background-size: contain;
+            right: calc(-5rem - var(--bs-gutter-x)* -0.5);
+            top: calc(-0rem - var(--bs-gutter-x)* -0.5);
+            background-position: calc(5.1rem - var(--bs-gutter-x)* -0.5) center;
+
+        }
+    }
+
+
+
+
+    &-group {
+        background-image: url(/assets/images/players.png);
+        background-position: right calc(0.5rem - var(--bs-gutter-x)* -0.5);
+        background-repeat: no-repeat;
+        background-size: 90% auto;
+        padding-top: 70vw;
+
+        @media (min-width: 768px) {
+            padding-top: unset;
+            background-size: 104% auto;
+            transform: translate(7.5%, -0%);
+            background-position: right calc(2.5rem - var(--bs-gutter-x)* -0.5);
+        }
+
+        @media (min-width: 991.98px) {
+            padding-top: unset;
+            background-size: 90.1% auto;
+            transform: translate(7.5%, -7.8%);
+            background-position: right calc(2.5rem - var(--bs-gutter-x)* -0.5);
+        }
+    }
+
+    &-players2 {
+        background-image: url(/assets/images/players2.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(calc(0.6% - var(--bs-gutter-x)* -0.5), 1.5rem);
+        min-height: 17rem;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 100%;
+            min-height: 22rem;
+            background-position: right top;
+            transform: translate(calc(7.8% - var(--bs-gutter-x) * -0.5), 0);
+
+        }
+
+        @media (min-width: 991.98px) {
+            min-height: 28rem;
+            transform: translate(calc(13% - var(--bs-gutter-x)* -0.5), -0%);
+
+        }
+    }
+
+}
+
+.text {
+    font-family: 'Gotham Narrow Medium', Arial, Helvetica, sans-serif;
+
+    &.lh-1_4 {
+        line-height: 1.4;
+    }
+
+    &-shadow-glow {
+        text-shadow: 0px 0px 2px #fdfdfdba, -1px 0px 5px #0a0a0a33, 2px 2px 4px #0a0a0a24, 2px 3px 10px #0a0a0a5c;
+    }
+
+    &-title {
+        font-size: 1rem;
+        line-height: 1.2;
+        font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+
+        @media (min-width: 768px) {
+            font-size: 2.1rem;
+            line-height: 1;
+        }
+
+        @media (min-width: 991.98px) {
+            font-size: 2.1rem;
+            line-height: 1;
+        }
+
+        &-bold {
+            font-size: 1.6rem;
+            line-height: 1.1;
+            font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+
+            @media (min-width: 768px) {
+                font-size: 2.1rem;
+
+            }
+
+            &-xs {
+                font-size: 1.1rem;
+
+                @media (min-width: 768px) {
+                    font-size: inherit;
+
+                }
+            }
+
+        }
+
+        &-bolder {
+
+            font-size: 3.17rem;
+            letter-spacing: 1.5px;
+            font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                font-size: 2.57rem;
+                letter-spacing: 1.5px;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 3.17rem;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        &-black {
+            font-size: 3.5rem;
+            line-height: 1;
+            letter-spacing: 2px;
+            font-family: 'Gotham Narrow Ultra', Arial, Helvetica, sans-serif;
+
+            @media (min-width: 768px) {
+                font-size: 5rem;
+                line-height: 1.25;
+                letter-spacing: 2px;
+            }
+        }
+
+
+    }
+}
+
+
+$props: (
+    m:margin,
+    mt:margin-top,
+    mb:margin-bottom,
+    mx:(margin-left, margin-right),
+    my:(margin-top, margin-bottom),
+    p:padding,
+    pt:padding-top,
+    pb:padding-bottom,
+    px:(padding-left, padding-right),
+    py:(padding-top, padding-bottom),
+
+);
+
+@each $id, $prop in $props {
+    @include generate-utility($prop, $id, $spacers, $grid-breakpoints);
+}
+
+@include generate-utility(z-index, zi, $zindex, $grid-breakpoints);
+@include generate-utility(min-height, min-vh, (50:50vh), $grid-breakpoints);
