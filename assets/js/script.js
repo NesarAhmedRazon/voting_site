@@ -15,6 +15,9 @@ function populateContests(id, data = null) {
   // Loop through the contest array and populate the div
   contest.forEach((match) => {
     const matchDiv = document.createElement("div");
+    const imgT1 = `assets/images/teams/${match.team1}.png`.toLowerCase();
+    const imgT2 = `assets/images/teams/${match.team2}.png`.toLowerCase();
+    const location = match?.exp ? ` Ballot Closed` : match.loc;
     matchDiv.className = "match col-sm-6 gy-3 gy-md-4 gx-5"; // Add a class for styling
     matchDiv.id = match.id;
     matchDiv.setAttribute("data-exp", match.exp);
@@ -24,9 +27,7 @@ function populateContests(id, data = null) {
               match?.exp ? ` expired` : ``
             }">
                 <div class="align-items-center card-body d-flex justify-content-between p-0">
-                    <img class="flag" src="assets/images/teams/${
-                      match.team1
-                    }.png" alt="${match.team1}">
+                    <img class="flag" src="${imgT1}" alt="${match.team1}">
                         <div class="info">
                             <div class="date">${match.date}</div>
                             <div class="teams"><span class="team">${
@@ -34,13 +35,9 @@ function populateContests(id, data = null) {
                             }</span> v <span class="team">${
       match.team2
     }</span></div>
-                            <div class="loc">${
-                              match?.exp ? ` Ballot Closed` : match.loc
-                            }</div>
+                            <div class="loc">${location}</div>
                         </div>
-                    <img class="flag" src="assets/images/teams/${
-                      match.team2
-                    }.png" alt="${match.team2}">
+                    <img class="flag" src="${imgT2}" alt="${match.team2}">
             
                 </div>
             </div>
