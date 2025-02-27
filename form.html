@@ -41,20 +41,148 @@
                 <div class="players-alt bg-players2 "></div>
             </div>
         </div>
-        <!-- Ballots Row-->
+        <!-- Form Row-->
 
-        <div class="mb-5 pb-4_5 pb-md-5 mt-4 align-items-center">
-            <div class="align-content-center gap-5 gap-md-0 min-vh-50 row">
-                <div class="col text-center">
+        <div class="mb-5 pb-4_5 pb-md-5 mt-4 align-items-center mx-auto max-vw-md-75 max-vw-lg-70">
+
+            <form id="entryForm" class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="user@example.com" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="userPhone" class="form-label">Phone Number</label>
+                    <input type="tel" name="num" data-validation="number" class="form-control" id="userPhone" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Phone number.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="gallagherEmployee" class="form-label">Are you a current Gallagher employee?</label>
+                    <select class="form-select" id="gallagherEmployee" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please confirm.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="gallagherBusiness" class="form-label">If so, which Gallagher business?</label>
+                    <input type="text" class="form-control" id="gallagherBusiness" required> <!-- conditional -->
+                    <div class="invalid-feedback">
+                        Please provide a Gallagher business Name.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="gallagherBusiness" class="form-label">Who are you nominating to be the Gallagher Match Ball Carrier?</label>
+                    <input type="text" class="form-control" id="gallagherBusiness" required> <!-- conditional -->
+                    <div class="invalid-feedback">
+                        Please provide Name.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="ageGroup" class="form-label">Are they aged between 08 - 13 (by August 22, 2025)?</label>
+                    <select class="form-select" id="ageGroup" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please confirm.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="permission" class="form-label">Do you have written permissions from their parent/guardian to enter the young person into this competition?</label>
+                    <select class="form-select" id="permission" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please confirm.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="relation" class="form-label">What would this experience mean to this young person?</label>
+                    <input type="text" class="form-control" id="relation" required>
+                    <div class="invalid-feedback">
+                        Please provide a Validation.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="hearedFrom" class="form-label">Where did you hear about the Gallagher Match Ball Carrier opportunity?</label>
+                    <select class="form-select" id="hearedFrom" required>
+                        <option selected disabled value="">Please select</option>
+                        <option value="0">Instagram</option>
+                        <option value="1">Facebook</option>
+                        <option value="2">TikTok</option>
+                        <option value="3">X</option>
+                        <option value="4">LinkedIn</option>
+                        <option value="5">Email</option>
+                        <option value="6">Referral</option>
+                        <option value="7">Other (Please specify)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please confirm.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="shareDataToGallagher" required>
+                        <label class="form-check-label" for="shareDataToGallagher">
+                            Please tick this box for your data to be shared with <a class="text" href="https://www.ajg.com/uk/global-privacy-notice/" target="_blank">Gallagher</a>
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="marketingEmail">
+                        <label class="form-check-label" for="marketingEmail">
+                            Tick this box to receive future marketing comms from Gallagher
+                        </label>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="termsAndConditions">
+                        <label class="form-check-label" for="termsAndConditions">
+                            Tick this box to confirm you agree with the <a class="text" href="#" target="_blank">Terms and Conditions</a> of this competition
+                        </label>
+
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-5">
                     <button type="submit" class="border-0 btn btn-cta rounded-0 text-uppercase ">Submit Entry</button>
                 </div>
+            </form>
 
-            </div>
 
 
-            <div class="col-12 pt-3 pb-lg-4_8 spacer text-center">
 
-            </div>
+            <div class="col-12 pt-3 pb-lg-4_8 spacer text-center"></div>
 
         </div>
         <div class="rhfr">

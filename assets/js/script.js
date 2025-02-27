@@ -58,18 +58,22 @@ function populateContests(id, data = null) {
   });
 }
 
-// Add the navigation div to the body on load
+// conditionally change 'gallagherBusiness' reqired
 document.addEventListener("DOMContentLoaded", function () {
-  // Create a new div element
-  const newDiv = document.createElement("div");
+  // Get the dropdown and input elements
+  const gallagherEmployee = document.getElementById("gallagherEmployee");
+  const gallagherBusiness = document.getElementById("gallagherBusiness");
 
-  // Set attributes or content for the div
-
-  newDiv.className = "position-fixed top-50 end-0 translate-middle-y w-10 h-25";
-  newDiv.style.backgroundColor = "lightblue";
-
-  // Append the div to the body
-  document.body.appendChild(newDiv);
+  // Add an event listener to the dropdown
+  gallagherEmployee.addEventListener("change", function () {
+    if (this.value === "yes") {
+      // If "Yes" is selected, make the input required
+      gallagherBusiness.setAttribute("required", true);
+    } else {
+      // If "No" is selected, remove the required attribute
+      gallagherBusiness.removeAttribute("required");
+    }
+  });
 });
 
 async function fetchJsonFromUrl(url) {
@@ -88,3 +92,17 @@ async function fetchJsonFromUrl(url) {
     throw error; // Re-throw the error for handling elsewhere
   }
 }
+
+//// OPtional: Add the navigation div to the body on load
+document.addEventListener("DOMContentLoaded", function () {
+  // Create a new div element
+  const newDiv = document.createElement("div");
+
+  // Set attributes or content for the div
+
+  newDiv.className = "position-fixed top-50 end-0 translate-middle-y w-10 h-25";
+  newDiv.style.backgroundColor = "lightblue";
+
+  // Append the div to the body
+  document.body.appendChild(newDiv);
+});

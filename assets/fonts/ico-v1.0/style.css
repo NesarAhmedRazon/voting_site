@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ico';
-  src:  url('fonts/ico.eot?8jg4nj');
-  src:  url('fonts/ico.eot?8jg4nj#iefix') format('embedded-opentype'),
-    url('fonts/ico.ttf?8jg4nj') format('truetype'),
-    url('fonts/ico.woff?8jg4nj') format('woff'),
-    url('fonts/ico.svg?8jg4nj#ico') format('svg');
+  src:  url('fonts/ico.eot?yv8zju');
+  src:  url('fonts/ico.eot?yv8zju#iefix') format('embedded-opentype'),
+    url('fonts/ico.ttf?yv8zju') format('truetype'),
+    url('fonts/ico.woff?yv8zju') format('woff'),
+    url('fonts/ico.svg?yv8zju#ico') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -42,4 +42,19 @@
 }
 .ico-check:before {
   content: "\f00c";
+}
+.ico-home:before {
+  content: "\f015";
+}
+.ico-list-alt:before {
+  content: "\f022";
+}
+.ico-handshake-o:before {
+  content: "\f2b5";
+}
+.ico-address-card-o:before {
+  content: "\f2bc";
+}
+.ico-vcard-o:before {
+  content: "\f2bc";
 }
