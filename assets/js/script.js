@@ -100,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set attributes or content for the div
 
-  newDiv.className = "position-fixed top-50 end-0 translate-middle-y w-10 h-25";
+  newDiv.className =
+    "bg-yellow zi-5 position-fixed top-50 end-0 translate-middle-y w-10 h-25";
   newDiv.style.backgroundColor = "lightblue";
 
   // Append the div to the body
